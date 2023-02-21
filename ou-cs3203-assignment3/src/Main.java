@@ -15,11 +15,16 @@ public class Main {
 		}
 		fred.close();
 		System.out.println("Raw list: " + list.toString());
-		
+		System.out.println(summation(list));
+	}
+	
+	public static int summation(ArrayList<Integer> list) {
 		int sum = 0;
 		for(int i = 0; i < list.size(); ++i) {
 			sum = sum + list.get(i);
 		}
-		System.out.println("Sum: " + sum);
+		System.out.print("Sum: ");
+		return sum;
 	}
 }
+
