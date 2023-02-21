@@ -13,9 +13,22 @@ public class Main {
 			list.add(input);
 			input = fred.nextInt();
 		}
-		fred.close();
 		System.out.println("Raw list: " + list.toString());
-		System.out.println(summation(list));
+		
+		System.out.println("Enter 1 to find sum, 2 to find product, or 3 to find both.");
+		int choice = fred.nextInt();
+		if(choice == 1) {
+			System.out.println("Sum: " + summation(list));
+		}
+		else if(choice == 2) {
+			System.out.println("Product: " + product(list));
+		}
+		else if(choice == 3) {
+			System.out.println("Sum: " + summation(list));
+			System.out.println("Product: " + product(list));
+		}
+		
+		fred.close();
 	}
 	
 	public static int summation(ArrayList<Integer> list) {
@@ -23,8 +36,15 @@ public class Main {
 		for(int i = 0; i < list.size(); ++i) {
 			sum = sum + list.get(i);
 		}
-		System.out.print("Sum: ");
 		return sum;
+	}
+	
+	public static int product(ArrayList<Integer> list) {
+		int product = 1;
+		for(int i = 0; i < list.size(); ++i) {
+			product = product * list.get(i);
+		}
+		return product;
 	}
 }
 
