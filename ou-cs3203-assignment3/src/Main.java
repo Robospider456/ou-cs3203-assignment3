@@ -15,7 +15,7 @@ public class Main {
 		}
 		System.out.println("Raw list: " + list.toString());
 		
-		System.out.println("Enter 1 to find sum, 2 to find product, or 3 to find both.");
+		System.out.println("Enter 1 to find sum, 2 to find product, or 3 to find both. Enter 4 to reverse array.");
 		int choice = fred.nextInt();
 		if(choice == 1) {
 			System.out.println("Sum: " + summation(list));
@@ -26,6 +26,9 @@ public class Main {
 		else if(choice == 3) {
 			System.out.println("Sum: " + summation(list));
 			System.out.println("Product: " + product(list));
+		}
+		else if(choice == 4) {
+			System.out.println("Reverse: " + reverse(list));
 		}
 		
 		fred.close();
@@ -45,6 +48,14 @@ public class Main {
 			product = product * list.get(i);
 		}
 		return product;
+	}
+	
+	public static ArrayList<Integer> reverse(ArrayList<Integer> list){
+		ArrayList<Integer> copy = new ArrayList<Integer>();
+		for(int i = list.size(); i > 0; --i) {
+			copy.add(list.get(i-1));
+		}
+		return copy;
 	}
 }
 
