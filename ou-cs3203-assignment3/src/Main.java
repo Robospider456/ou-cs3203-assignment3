@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+//Hello, it's me here for part 10! Bazinga!
+
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Enter only positive numbers seperated by a space. Then press enter");
